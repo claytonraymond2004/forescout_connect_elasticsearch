@@ -1,11 +1,11 @@
 
   
 
-# connect_elasticsearch
+# forescout_connect_elasticsearch
 
   
 
-Forescout EyeExtend Connect app for Elastic
+Forescout EyeExtend Connect app for Elasticsearch
 
   
 
