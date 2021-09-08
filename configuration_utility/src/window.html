@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Configuration Utility</title>
+
+	<link rel="stylesheet" href="./lib/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./lib/bootstrap.min.css">
+	<link rel="stylesheet" href="./lib/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./style.css">
+
+	<script>
+		delete module.exports
+	</script>
+
+
+</head>
+
+<body>
+	<div id="container" class="container-fluid" style="margin-top:20px;">
+		<div id="loader" style="display: none; position: absolute; left: 0px; bottom: 0px; top:0px; right: 0px; background-color: #e2e2e230; z-index: 9000;">
+			<div style="position: absolute; top: 45%; left: 45%;">
+				<div class="spinner-border text-primary" style="width:100px; height: 100px;" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="loginScreen" class="jumbotron">
+			<h1 class="display-4">Configuration Utility</h1>
+			<p class="lead">Please fill in the Forescout API details, or leave blank to use the default ones. Your inputs will be saved by default.</p>
+			<hr class="my-4">
+
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="apiEndpoint">Forescout API Endpoint</label>
+					<input type="text" class="form-control" id="apiEndpoint" aria-describedby="emailHelp">
+				</div>
+
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+				</div>
+
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password">
+				</div>
+			</form>
+			<div class="d-flex flex-row-reverse">
+				<a id="buttonForescoutConnect" class="btn btn-primary btn-lg" href="#" role="button">NEXT ></a>
+			</div>
+			<hr class="my-4">
+		</div>
+
+		<div id="configScreen" class="jumbotron" style="display: none;">
+			<div class="row">
+				<div class="col">
+					<div style="padding:10px 0px; display: flex; justify-content: space-between;">
+						<span>Available Fields:</span><input placeholder="Filter" id="filterHostList"/>
+					</div>
+					<div style="overflow-y: scroll; height: 80vh;">
+						<div id="hostfieldList" class="list-group">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div style="padding:10px 0px; display: flex; justify-content: space-between;">
+						<span>Selected Fields:</span><input placeholder="Filter" id="filterSelectedList"/>
+					</div>
+					<div style="overflow-y: scroll; height: 80vh;background: white;">
+						<div id="selectedList" class="list-group">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div style="padding:10px 0px">
+						Result:
+					</div>
+					<div style="overflow-y: scroll;height: 80vh;background: white;padding: 10px;word-break: break-word;font-size: 12px;font-family: monospace;">
+						<div id="string" class="list-group">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./lib/jquery-3.2.1.min.js"></script>
+	<script src="./lib/bootstrap.bundle.min.js"></script>
+	<script src="./window.js" charset="utf-8"></script>
+</body>
+
+</html>

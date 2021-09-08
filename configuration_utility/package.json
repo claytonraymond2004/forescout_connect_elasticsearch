@@ -1,0 +1,17 @@
+{
+  "name": "configuration_utility",
+  "version": "1.0.0",
+  "description": "Configuration utility for selecting hostfields to be integrated to ES",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
